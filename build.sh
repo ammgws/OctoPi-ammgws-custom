@@ -7,7 +7,6 @@ echo "Grab OctoPi image"
 mkdir --parents workspace
 cd workspace || exit
 curl \
-  --skip-existing \
   --location \
   --output octopi.zip \
   "${OCTOPI_DOWNLOAD_URL}"
