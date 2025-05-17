@@ -12,8 +12,10 @@ curl -fsSL https://download.opensuse.org/repositories/shells:fish/Debian_12/Rele
   | gpg --dearmor \
   | tee /etc/apt/trusted.gpg.d/shells_fish.gpg \
   > /dev/null
-sudo apt update
-sudo apt --yes install fish foot-terminfo micro
+
+apt-get clean
+apt-get update
+apt-get --yes install fish foot-terminfo micro
 
 sudo -u pi chsh --shell $(which fish)
 
